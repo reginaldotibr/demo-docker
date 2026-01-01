@@ -146,7 +146,7 @@ Rodar as seedeers para cadastrar registro de teste.
 ./vendor/bin/sail artisan db:seed
 ```
 
-Acessar a aplicação no navegador.
+Acessar a aplicação no navegador de internet.
 ```
 http://127.0.0.1
 ```
