@@ -121,9 +121,9 @@ Verificar se o PHP 8.4 está ativo.
 php -v
 ```
 
-Acessar o diretório que será criado o projeto "c:/xampp/htdocs/celke/meu-projeto-docker". /mnt/c → é onde o WSL monta o disco C: do Windows. /mnt/c/xampp/htdocs/celke → equivale a C:\xampp/htdocs/celke.
+Acessar o diretório que será criado o projeto "c:/.../htdocs/../meu-projeto-docker". /mnt/c → é onde o WSL monta o disco C: do Windows. /mnt/c/.../htdocs/... → equivale a C:\.../htdocs/....
 ```
-cd /mnt/c/xampp/htdocs/celke/meu-projeto-docker
+cd /mnt/c/.../htdocs/.../meu-projeto-docker
 ```
 
 Publicar o docker-compose.yml e alterar no arquivo .env as variáveis ​​de ambiente necessárias para se conectar aos serviços do Docker.
