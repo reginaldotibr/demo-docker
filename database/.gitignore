@@ -1,1 +1,161 @@
+# =========================
+# 1) Segredos e ambiente
+# =========================
+# Nunca versionar variáveis de ambiente
+.env
+.env.*
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+.env.example.local
 *.sqlite*
+
+
+
+# =========================
+# 2) Dependências e build
+# =========================
+/vendor/             # Composer
+/node_modules/       # Node/NPM/Yarn/PNPM
+
+# (Opcional) Se você NÃO versiona o lock para builds reprodutíveis, ignore-o:
+# composer.lock
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# =========================
+# 3) Storage e cache
+# =========================
+/storage/*.key
+/storage/app/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+
+# Se você usa links simbólicos públicos criados por "php artisan storage:link"
+# Geralmente NÃO se versiona o conteúdo, apenas o link.
+/public/storage
+
+# =========================
+# 4) Artefatos do front-end
+# =========================
+/public/hot
+/public/mix-manifest.json
+/public/build/          # Vite build (dist)
+/resources/js/*.map     # Sourcemaps (ajuste se precisar)
+/resources/css/*.map
+
+# =========================
+# 5) Arquivos temporários e de sistema
+# =========================
+# Linux/Mac/Windows e editores
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.orig
+.DS_Store
+Thumbs.db
+
+# =========================
+# 6) IDEs e ferramentas
+# =========================
+# JetBrains IDEs (PhpStorm)
+/.idea/
+/*.iml
+
+# VS Code
+/.vscode/
+
+# Sublime
+/*.sublime-project
+/*.sublime-workspace
+
+# Outros
+/.history
+/.nfpm/
+/.tool-versions
+
+# =========================
+# 7) Testes e cobertura
+# =========================
+/coverage/
+.clover
+.phpunit.result.cache
+.phpunit.cache
+/.nyc_output/
+
+# Pest (se usar)
+.pest-results.json
+
+# =========================
+# 8) Docker e containers (Opcional)
+# =========================
+# Ignore overrides e envs específicos de container
+docker-compose.override.yml
+.env.docker
+.docker/
+docker/
+tmp/
+# Arquivos gerados por volumes temporários
+/.containers/
+
+# =========================
+# 9) CI/CD (Opcional, ajuste ao seu provedor)
+# =========================
+# GitHub Actions
+/.github/workflows/*.local.yml
+/.github/*-secrets.yml
+
+# GitLab CI
+/.gitlab-ci-local.yml
+
+# Bitbucket Pipelines
+/bitbucket-pipelines.local.yml
+
+# =========================
+# 10) Configuração do Laravel (build e cache)
+# =========================
+# Caches gerados em produção (não precisam ir pro repositório)
+bootstrap/cache/*.php
+bootstrap/cache/packages.php
+bootstrap/cache/services.php
+bootstrap/cache/config.php
+bootstrap/cache/routes.php
+
+# =========================
+# 11) Segurança e certificados (Opcional — não versionar segredos)
+# =========================
+# Certificados, chaves e CSR (mantenha fora do repo se possível)
+*.pem
+*.key
+*.cer
+*.crt
+*.csr
+
+# =========================
+# 12) Ferramentas de análise/linters (Opcional)
+# =========================
+/reports/
+/artifacts/
+/build-artifacts/
+phpstan.neon.tmp
+phpstan.result.cache
+larastan.cache
+eslintcache
+.stylelintcache
+
+# =========================
+# 13) Outras plataformas/frameworks (Opcional)
+# =========================
+# Se usa Inertia/Next/React com SSR, ajuste as pastas de build específicas
+/.next/
+.next/cache/
+dist/
+build/
+``
